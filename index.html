@@ -614,37 +614,32 @@
     filter:grayscale(.22) contrast(1.03);
   }
 
-  /* seluruh area peta jadi tombol: klik -> notifikasi konfirmasi kunjungan */
-  .map-shield{
-    position:absolute;inset:0;z-index:1;
-    display:block;width:100%;height:100%;
-    padding:0;border:0;background:transparent;cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
-  }
-  .map-shield:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
-  .map-hint{
-    position:absolute;right:16px;bottom:16px;
+  /* tombol konfirmasi mengambang di atas peta (peta tetap bisa digeser/zoom) */
+  .map-pill{
+    position:absolute;right:16px;bottom:16px;z-index:3;
     display:inline-flex;align-items:center;gap:8px;
     padding:11px 16px;border-radius:999px;
-    background:rgba(23,26,28,.92);
     border:1px solid rgba(255,255,255,.16);
-    color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.01em;
-    white-space:nowrap;
+    background:rgba(23,26,28,.92);
+    color:#fff;font:inherit;font-size:.75rem;font-weight:700;letter-spacing:.01em;
+    white-space:nowrap;cursor:pointer;
     box-shadow:0 12px 30px -16px rgba(0,0,0,.7);
     backdrop-filter:blur(4px);
     transition:background .2s ease,transform .2s ease;
+    -webkit-tap-highlight-color:transparent;
   }
-  .map-hint svg{width:16px;height:16px;flex:0 0 auto;color:var(--orange)}
-  .map-shield:hover .map-hint{background:rgba(23,26,28,.98);transform:translateY(-2px)}
+  .map-pill svg{width:16px;height:16px;flex:0 0 auto;color:var(--orange)}
+  .map-pill:hover{background:rgba(23,26,28,.98);transform:translateY(-2px)}
+  .map-pill:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
   @media (prefers-reduced-motion: no-preference){
-    .map-hint{animation:mapHint 3.8s ease-in-out infinite}
+    .map-pill{animation:mapHint 3.8s ease-in-out infinite}
   }
   @keyframes mapHint{
     0%,100%{box-shadow:0 12px 30px -16px rgba(0,0,0,.7),0 0 0 0 rgba(244,119,40,.38)}
     50%{box-shadow:0 12px 30px -16px rgba(0,0,0,.7),0 0 0 9px rgba(244,119,40,0)}
   }
   @media(max-width:520px){
-    .map-hint{right:12px;bottom:12px;padding:10px 14px;font-size:.6875rem}
+    .map-pill{right:12px;bottom:12px;padding:10px 14px;font-size:.6875rem}
   }
 
   /* dialog konfirmasi kunjungan */
@@ -1635,16 +1630,13 @@
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen></iframe>
 
-      <button class="map-shield" type="button" id="map-open" aria-haspopup="dialog" aria-controls="visit-notice" aria-label="Klik peta untuk konfirmasi kunjungan">
-        <span class="map-hint">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          Klik peta untuk konfirmasi
-        </span>
+      <button class="map-pill" type="button" id="map-open" aria-haspopup="dialog" aria-controls="visit-notice" aria-label="Konfirmasi kunjungan sebelum datang ke lokasi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Konfirmasi kunjungan
       </button>
-
 
     </div>
   </div>
