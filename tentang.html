@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- ===== SEO DASAR ===== -->
-<title>Tentang CV Indo Jaya — Profil Pembeli Limbah Besi &amp; Logam Industri</title>
-<meta name="description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, dan kuningan volume besar untuk pabrik dan kawasan industri. Penimbangan transparan, dokumen lengkap." />
+<title>Tentang CV Indo Jaya — Pembeli Besi Tua &amp; Scrap Metal Pabrik</title>
+<meta name="description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, kuningan, dan stainless untuk pabrik. Penimbangan transparan, dokumen lengkap, volume besar." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <meta name="author" content="CV Indo Jaya" />
 <meta name="geo.region" content="ID" />
@@ -17,16 +17,16 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="BESI KITA — CV Indo Jaya" />
 <meta property="og:locale" content="id_ID" />
-<meta property="og:title" content="Tentang CV Indo Jaya — Pembeli Limbah Besi &amp; Logam Industri" />
-<meta property="og:description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, dan kuningan volume besar langsung dari pabrik dan kawasan industri." />
+<meta property="og:title" content="Tentang CV Indo Jaya — Pembeli Besi Tua &amp; Scrap Metal Pabrik" />
+<meta property="og:description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, kuningan, dan stainless untuk pabrik. Penimbangan transparan, dokumen lengkap, volume besar." />
 <meta property="og:url" content="https://besikita.co.id/tentang.html" />
 <meta property="og:image" content="https://besikita.co.id/assets/hero/hero.jpg" />
 <meta property="og:image:width" content="1500" />
 <meta property="og:image:height" content="1130" />
 <meta property="og:image:alt" content="Area penampungan scrap besi dan logam di kawasan industri" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Tentang CV Indo Jaya — Pembeli Limbah Besi &amp; Logam Industri" />
-<meta name="twitter:description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, dan kuningan volume besar langsung dari pabrik." />
+<meta name="twitter:title" content="Tentang CV Indo Jaya — Pembeli Besi Tua &amp; Scrap Metal Pabrik" />
+<meta name="twitter:description" content="Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, kuningan, dan stainless untuk pabrik. Volume besar dan penimbangan transparan." />
 <meta name="twitter:image" content="https://besikita.co.id/assets/hero/hero.jpg" />
 
 <meta name="theme-color" content="#171a1c" />
@@ -36,6 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Work+Sans:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/hero/hero.jpg" fetchpriority="high" />
 
 <style>
   /* ============================================================
@@ -71,6 +72,7 @@
   p{margin:0}
   button{font:inherit;color:inherit}
   :focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+  [id]{scroll-margin-top:88px}
   .skip-link{
     position:absolute;left:-9999px;top:0;z-index:100;
     padding:12px 18px;background:var(--orange);color:#171a1c;
@@ -129,115 +131,385 @@
   @media(min-width:768px){.mobile-menu{display:none!important}}
 
   /* ============================================================
-     PAGE HEAD
+     HERO HALAMAN
      ============================================================ */
   .page-head{
-    position:relative;
+    position:relative;overflow:hidden;
     background:var(--coal);color:#fff;
-    padding:48px 0 56px;
+    padding:36px 0 0;
   }
-  @media(min-width:768px){.page-head{padding:64px 0 72px}}
-  .page-head::after{
-    content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
-    background:linear-gradient(90deg,rgba(244,119,40,0),#f47728 50%,rgba(244,119,40,0));
-    opacity:.85;
+  @media(min-width:768px){.page-head{padding:56px 0 0}}
+  .page-head::before{
+    content:"";position:absolute;pointer-events:none;
+    top:-160px;right:-120px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(244,119,40,.18),rgba(244,119,40,0) 68%);
   }
+  .ph-grid{
+    position:relative;
+    display:grid;gap:34px;
+    padding-bottom:40px;
+  }
+  @media(min-width:980px){
+    .ph-grid{grid-template-columns:1.02fr .98fr;align-items:center;gap:56px;padding-bottom:56px}
+  }
+
   .crumb{
     display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-    margin:0 0 18px;padding:0;list-style:none;
+    margin:0 0 16px;padding:0;list-style:none;
     font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
     color:rgba(255,255,255,.42);
   }
   .crumb a{transition:color .18s ease}
   .crumb a:hover{color:var(--orange)}
   .crumb li + li::before{content:"/";margin-right:8px;color:rgba(255,255,255,.22)}
+
   .page-title{
     margin:0;
     font-family:var(--font-head);font-weight:800;
-    font-size:clamp(2rem,4.6vw,3.15rem);
+    font-size:clamp(2rem,4.4vw,3.05rem);
     line-height:1.08;letter-spacing:-.025em;
   }
   .page-lead{
-    margin-top:18px;max-width:56ch;
+    margin-top:16px;max-width:56ch;
     font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,.72);
   }
 
-  /* ============================================================
-     ISI
-     ============================================================ */
-  .about{padding:60px 0 76px}
-  @media(min-width:768px){.about{padding:84px 0 104px}}
+  .ph-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:46px;padding:0 20px;border-radius:8px;
+    font-size:.9375rem;font-weight:700;line-height:1;
+    transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+  }
+  .btn svg{width:16px;height:16px;flex:0 0 auto}
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-primary:hover{background:#ff8a3d;transform:translateY(-1px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.24);color:#fff}
+  .btn-ghost:hover{border-color:rgba(244,119,40,.7);color:var(--orange)}
 
-  .about-grid{display:grid;gap:48px}
-  @media(min-width:1000px){
-    .about-grid{grid-template-columns:minmax(0,1fr) 340px;gap:64px;align-items:start}
+  .ph-media{position:relative;margin:0}
+  .ph-media img{
+    width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:0 40px 80px -50px rgba(0,0,0,.9);
+  }
+  .ph-badge{
+    position:absolute;left:14px;bottom:14px;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border-radius:999px;
+    background:rgba(18,21,23,.88);
+    border:1px solid rgba(255,255,255,.16);
+    backdrop-filter:blur(6px);
+    font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:rgba(255,255,255,.82);
+  }
+  .ph-badge b{color:var(--orange);font-weight:800}
+
+  /* ============================================================
+     STATISTIK (angka dummy)
+     ============================================================ */
+  .stats{
+    position:relative;
+    background:var(--coal);color:#fff;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:26px 0 30px;
+  }
+  .stats::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:linear-gradient(90deg,rgba(244,119,40,0),#f47728 50%,rgba(244,119,40,0));
+    opacity:.9;
+  }
+  .stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+  @media(min-width:800px){
+    .stats-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+    .stat{padding:0 26px;border-left:1px solid rgba(255,255,255,.1)}
+    .stat:first-child{padding-left:0;border-left:0}
+    .stat:last-child{padding-right:0}
+  }
+  .stat-num{
+    display:block;
+    font-family:var(--font-head);font-weight:800;
+    font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1;letter-spacing:-.02em;
+    color:var(--orange);
+  }
+  .stat-lbl{display:block;margin-top:7px;font-size:.8125rem;line-height:1.4;color:rgba(255,255,255,.6)}
+  .stats-note{
+    margin-top:20px;font-size:.6875rem;letter-spacing:.04em;
+    color:rgba(255,255,255,.3);
   }
 
-  .about h2{
-    margin:44px 0 0;
+  /* ============================================================
+     SECTION UMUM
+     ============================================================ */
+  .sec{padding:56px 0}
+  @media(min-width:768px){.sec{padding:84px 0}}
+  .sec-cream{background:var(--cream)}
+  .sec-paper{background:var(--paper)}
+  .sec-white{background:#fff}
+
+  .eyebrow{
+    margin:0;
+    font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--orange-deep);
+  }
+  .eyebrow-light{color:var(--orange)}
+  .h2{
+    margin:10px 0 0;
+    font-family:var(--font-head);font-weight:800;
+    font-size:clamp(1.55rem,3.1vw,2.15rem);
+    line-height:1.16;letter-spacing:-.02em;
+  }
+  .sec-head{max-width:62ch;margin-bottom:32px}
+  .sec-sub{margin-top:12px;font-size:1rem;line-height:1.7;color:var(--body)}
+
+  /* ============================================================
+     PROFIL
+     ============================================================ */
+  .about-grid{display:grid;gap:44px}
+  @media(min-width:1000px){
+    .about-grid{grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:start}
+  }
+  .prose h2{
+    margin:40px 0 0;
     font-family:var(--font-head);font-weight:700;
     font-size:1.375rem;line-height:1.3;letter-spacing:-.01em;
   }
-  .about h2:first-child{margin-top:0}
-  .about p{
-    margin-top:14px;max-width:64ch;
-    font-size:1.0625rem;line-height:1.78;color:var(--body);
+  .prose h2:first-child{margin-top:0}
+  .prose .eyebrow + h2{margin-top:10px}
+  .prose .h2{font-size:clamp(1.55rem,3.1vw,2.15rem)}
+  .prose p{margin-top:14px;max-width:64ch;font-size:1.0625rem;line-height:1.78;color:var(--body)}
+  .prose-list{
+    list-style:none;margin:18px 0 0;padding:0;max-width:64ch;
+    display:grid;gap:11px;
   }
-  .about-list{
-    list-style:none;margin:20px 0 0;padding:0;max-width:64ch;
-    display:grid;gap:12px;
-  }
-  .about-list li{
-    display:flex;gap:12px;
-    font-size:1rem;line-height:1.65;color:var(--body);
-  }
-  .about-list li::before{
+  .prose-list li{display:flex;gap:12px;font-size:1rem;line-height:1.65;color:var(--body)}
+  .prose-list li::before{
     content:"";flex:0 0 auto;
     width:7px;height:7px;border-radius:50%;background:var(--orange);margin-top:9px;
   }
-  .about a:hover{color:var(--orange-deep)}
-  .about-link{
-    text-decoration:underline;text-underline-offset:3px;
-    text-decoration-color:rgba(244,119,40,.55);
-  }
-  .about-link:hover{text-decoration-color:var(--orange)}
+  .prose a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(244,119,40,.55)}
+  .prose a:hover{color:var(--orange-deep);text-decoration-color:var(--orange)}
 
-  .about-card{
+  .about-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
+  .about-media img{
+    width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;
+  }
+
+  .fact-card{
     background:#fff;border:1px solid rgba(23,26,28,.1);border-radius:16px;
-    padding:26px;
+    padding:24px;
     box-shadow:0 28px 56px -44px rgba(23,26,28,.65);
   }
-  @media(min-width:1000px){.about-card{position:sticky;top:96px}}
-  .about-card h2{
+  @media(min-width:1000px){.fact-card{position:sticky;top:96px}}
+  .fact-card h2{
     margin:0;
     font-family:var(--font-head);font-weight:700;
     font-size:1.0625rem;line-height:1.35;
   }
-  .about-card p{
-    margin-top:10px;
-    font-size:.9375rem;line-height:1.65;color:var(--body);
+  .fact-list{list-style:none;margin:14px 0 0;padding:0}
+  .fact-list li{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    padding:10px 0;border-bottom:1px dashed rgba(23,26,28,.14);
+    font-size:.875rem;
   }
-  .about-card ul{
-    list-style:none;margin:16px 0 0;padding:0;
-    display:grid;gap:9px;
-  }
-  .about-card li{
-    display:flex;gap:9px;
-    font-size:.875rem;line-height:1.5;color:#5a6266;
-  }
-  .about-card li::before{
-    content:"";flex:0 0 auto;
-    width:5px;height:5px;border-radius:50%;background:#c3c8c5;margin-top:8px;
-  }
-  .about-cta{
+  .fact-list li:last-child{border-bottom:0;padding-bottom:0}
+  .fact-k{color:#6d7579;flex:0 0 auto}
+  .fact-v{font-weight:700;text-align:right;color:var(--coal)}
+  .fact-cta{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    width:100%;min-height:46px;margin-top:20px;padding:0 18px;
-    border-radius:10px;background:var(--orange);color:#fff;
-    font-weight:700;font-size:.9375rem;
+    width:100%;min-height:44px;margin-top:18px;padding:0 16px;
+    border-radius:9px;background:var(--orange);color:#fff;
+    font-weight:700;font-size:.9rem;
     transition:background .2s ease,transform .2s ease;
   }
-  .about-cta:hover{background:#ff8a3d;transform:translateY(-1px)}
-  .about-cta svg{width:17px;height:17px}
+  .fact-cta:hover{background:#ff8a3d;transform:translateY(-1px)}
+  .fact-cta svg{width:16px;height:16px}
+  .fact-note{margin-top:12px;font-size:.6875rem;line-height:1.5;color:#8b9296}
+
+  /* ============================================================
+     PRINSIP
+     ============================================================ */
+  .val-grid{display:grid;gap:14px}
+  @media(min-width:640px){.val-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(min-width:1000px){.val-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  .val{
+    background:#fff;border:1px solid rgba(23,26,28,.08);border-radius:14px;
+    padding:22px;
+  }
+  .val-ico{
+    display:grid;place-items:center;
+    width:42px;height:42px;margin-bottom:16px;border-radius:10px;
+    background:rgba(244,119,40,.12);color:var(--orange-deep);
+  }
+  .val-ico svg{width:20px;height:20px}
+  .val h3{
+    margin:0;
+    font-family:var(--font-head);font-weight:700;
+    font-size:1.0625rem;line-height:1.35;
+  }
+  .val p{margin-top:8px;font-size:.9375rem;line-height:1.65;color:var(--body)}
+
+  /* ============================================================
+     JENIS LIMBAH
+     ============================================================ */
+  .mat-grid{display:grid;gap:16px}
+  @media(min-width:600px){.mat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(min-width:980px){.mat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .mat{
+    display:flex;flex-direction:column;
+    background:#fff;border:1px solid rgba(23,26,28,.09);border-radius:14px;
+    overflow:hidden;
+    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+  }
+  .mat:hover,.mat:focus-visible{
+    transform:translateY(-3px);
+    border-color:rgba(244,119,40,.45);
+    box-shadow:0 24px 44px -32px rgba(23,26,28,.7);
+  }
+  .mat-media{overflow:hidden;background:#dfe1de}
+  .mat-media img{
+    width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;
+    transition:transform .6s ease;
+  }
+  .mat:hover .mat-media img{transform:scale(1.04)}
+  .mat-body{display:flex;flex-direction:column;flex:1;padding:17px 19px 19px}
+  .mat-body h3{
+    margin:0;
+    font-family:var(--font-head);font-weight:700;
+    font-size:1.0625rem;line-height:1.3;
+  }
+  .mat-body p{margin-top:6px;font-size:.9rem;line-height:1.6;color:var(--body);flex:1}
+  .mat-link{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:12px;
+    font-size:.8125rem;font-weight:700;color:var(--orange-deep);
+  }
+  .mat-link svg{width:13px;height:13px;transition:transform .2s ease}
+  .mat:hover .mat-link svg{transform:translateX(3px)}
+
+  /* ============================================================
+     DOKUMENTASI
+     ============================================================ */
+  .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media(min-width:980px){.photo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  .photo-grid figure{
+    position:relative;margin:0;overflow:hidden;border-radius:10px;background:#dfe1de;
+  }
+  .photo-grid img{
+    width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;
+    transition:transform .6s ease;
+  }
+  .photo-grid figure:hover img{transform:scale(1.04)}
+  .photo-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:26px 13px 11px;
+    font-size:.75rem;line-height:1.4;color:#fff;
+    background:linear-gradient(to top,rgba(0,0,0,.74),rgba(0,0,0,0));
+  }
+
+  /* ============================================================
+     ALUR KERJA
+     ============================================================ */
+  .steps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  @media(min-width:900px){.steps{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
+  .step{
+    position:relative;
+    background:#fff;border:1px solid rgba(23,26,28,.09);border-radius:14px;
+    padding:22px;
+  }
+  .step-n{
+    display:block;
+    font-family:var(--font-head);font-weight:800;
+    font-size:.75rem;letter-spacing:.14em;color:var(--orange-deep);
+  }
+  .step h3{
+    margin:9px 0 0;
+    font-family:var(--font-head);font-weight:700;
+    font-size:1.0625rem;line-height:1.35;
+  }
+  .step p{margin-top:8px;font-size:.9rem;line-height:1.65;color:var(--body)}
+
+  /* ============================================================
+     WILAYAH
+     ============================================================ */
+  .cov-grid{display:grid;gap:24px}
+  @media(min-width:1000px){.cov-grid{grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}}
+  .chips{
+    display:flex;flex-wrap:wrap;gap:8px;
+    list-style:none;margin:20px 0 0;padding:0;
+  }
+  .chip{
+    padding:8px 14px;border-radius:999px;
+    background:#fff;border:1px solid rgba(23,26,28,.14);
+    font-size:.8125rem;color:var(--body);
+  }
+  .cov-card{
+    background:#fff;border:1px solid rgba(23,26,28,.1);border-radius:14px;
+    padding:24px;
+  }
+  .cov-card h3{
+    margin:0;
+    font-family:var(--font-head);font-weight:700;
+    font-size:1.0625rem;line-height:1.35;
+  }
+  .cov-card p{margin-top:8px;font-size:.9375rem;line-height:1.65;color:var(--body)}
+  .cov-card .btn{margin-top:16px;width:100%}
+
+  /* ============================================================
+     FAQ
+     ============================================================ */
+  .faq-list{margin-top:6px;border-top:1px solid rgba(23,26,28,.12)}
+  .faq-item{border-bottom:1px solid rgba(23,26,28,.12)}
+  .faq-item summary{
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:18px 0;cursor:pointer;list-style:none;
+    font-family:var(--font-head);font-weight:700;
+    font-size:1.0625rem;line-height:1.4;color:var(--coal);
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";flex:0 0 auto;
+    display:grid;place-items:center;
+    width:26px;height:26px;border-radius:999px;
+    border:1px solid rgba(244,119,40,.45);
+    color:var(--orange-deep);font-size:1rem;font-weight:400;
+    transition:background .2s ease,color .2s ease,transform .25s ease;
+  }
+  .faq-item[open] summary::after{
+    content:"–";
+    background:var(--orange);border-color:var(--orange);color:#fff;
+    transform:rotate(180deg);
+  }
+  .faq-item p{
+    margin:0;padding:0 40px 20px 0;max-width:70ch;
+    font-size:.975rem;line-height:1.72;color:var(--body);
+  }
+
+  /* ============================================================
+     CTA PENUTUP
+     ============================================================ */
+  .cta-band{
+    position:relative;overflow:hidden;
+    background:var(--coal);color:#fff;
+    padding:52px 0;
+  }
+  @media(min-width:768px){.cta-band{padding:68px 0}}
+  .cta-band::before{
+    content:"";position:absolute;pointer-events:none;
+    left:-140px;bottom:-180px;width:480px;height:480px;border-radius:50%;
+    background:radial-gradient(circle,rgba(244,119,40,.16),rgba(244,119,40,0) 70%);
+  }
+  .cta-inner{position:relative;display:grid;gap:24px}
+  @media(min-width:900px){.cta-inner{grid-template-columns:1.15fr .85fr;align-items:center;gap:44px}}
+  .cta-band h2{
+    margin:0;
+    font-family:var(--font-head);font-weight:800;
+    font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;letter-spacing:-.02em;
+  }
+  .cta-band p{margin-top:10px;max-width:52ch;font-size:.975rem;line-height:1.65;color:rgba(255,255,255,.66)}
+  .cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+  @media(min-width:900px){.cta-actions{justify-content:flex-end}}
 
   /* ============================================================
      FOOTER
@@ -402,21 +674,133 @@
       "name": "CV Indo Jaya",
       "alternateName": "BESI KITA",
       "url": "https://besikita.co.id/",
-      "description": "Pembeli limbah besi dan logam skala industri untuk pabrik, gudang, dan kawasan industri."
+      "description": "Pembeli limbah besi dan logam skala industri. Menerima besi tua, scrap metal, tembaga, aluminium, dan kuningan dalam volume besar langsung dari pabrik dan kawasan industri di Indonesia.",
+      "areaServed": { "@type": "Country", "name": "Indonesia" },
+      "knowsAbout": [
+        "pembelian limbah besi",
+        "scrap metal",
+        "besi tua",
+        "limbah tembaga",
+        "limbah aluminium",
+        "kuningan bekas",
+        "limbah stainless steel",
+        "besi cor bekas"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": ["id"],
+        "areaServed": "ID"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://besikita.co.id/#website",
+      "url": "https://besikita.co.id/",
+      "name": "BESI KITA — CV Indo Jaya",
+      "inLanguage": "id",
+      "publisher": { "@id": "https://besikita.co.id/#organisasi" }
     },
     {
       "@type": "AboutPage",
       "@id": "https://besikita.co.id/tentang.html#halaman",
       "url": "https://besikita.co.id/tentang.html",
-      "name": "Tentang CV Indo Jaya",
+      "name": "Tentang CV Indo Jaya — Pembeli Besi Tua & Scrap Metal Pabrik",
+      "description": "Profil CV Indo Jaya: pembeli limbah besi tua, tembaga, aluminium, kuningan, dan stainless untuk pabrik. Penimbangan transparan, dokumen lengkap, volume besar.",
       "inLanguage": "id",
-      "about": { "@id": "https://besikita.co.id/#organisasi" }
+      "isPartOf": { "@id": "https://besikita.co.id/#website" },
+      "about": { "@id": "https://besikita.co.id/#organisasi" },
+      "dateModified": "2026-11-08",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://besikita.co.id/assets/hero/hero.jpg",
+        "width": 1500,
+        "height": 1130
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://besikita.co.id/" },
         { "@type": "ListItem", "position": 2, "name": "Tentang", "item": "https://besikita.co.id/tentang.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://besikita.co.id/tentang.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apakah CV Indo Jaya membeli limbah besi dari pabrik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. Kami membeli limbah besi dan logam langsung dari pabrik, gudang, dan fasilitas produksi. Pembelian bersifat B2B dan tidak melayani rumah tangga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa volume minimal limbah yang bisa dijual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kami memprioritaskan volume besar agar pengangkutan efisien. Kirim perkiraan berat dan lokasi pabrik, tim akan menilai apakah pengambilan bisa dijadwalkan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana harga limbah besi ditentukan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Harga mengikuti jenis logam, kadar material, kondisi, dan volume. Besi tua, tembaga, aluminium, dan kuningan dihitung terpisah, lalu ditawarkan per kilogram sebelum material diangkut."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana proses penimbangan dan pembayaran?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Material ditimbang di jembatan timbang resmi. Hasil penimbangan dicatat dalam berita acara, dan pembayaran dilakukan setelah dokumen ditandatangani."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah limbah bisa dijemput ke lokasi pabrik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bisa. Pengangkutan dijadwalkan sesuai volume dan akses kendaraan di lokasi, termasuk pengambilan bertahap untuk volume besar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah bisa kerja sama pengambilan rutin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bisa. Untuk pabrik dengan limbah produksi rutin, jadwal pengambilan dapat disusun berulang agar material tidak menumpuk di area kerja."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dokumen apa saja yang disiapkan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Berita acara penimbangan dan surat jalan. Dokumen ini bisa dipakai untuk pembukuan, audit internal, dan pencatatan aset perusahaan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah menerima limbah logam dari rumah tangga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak. CV Indo Jaya hanya melayani pembelian dari perusahaan, pabrik, gudang, dan kawasan industri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wilayah mana saja yang dilayani?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Area utama Jabodetabek, Cikarang, Karawang, dan Bandung. Untuk lokasi lain, kirim alamat pabrik untuk dicek jadwal dan biaya angkutnya."
+          }
+        }
       ]
     }
   ]
@@ -477,30 +861,80 @@
 <main id="konten">
 
   <!-- ============================================================
-       JUDUL HALAMAN
+       HERO HALAMAN
        ============================================================ -->
   <section class="page-head" aria-labelledby="tentang-title">
     <div class="wrap">
-      <ol class="crumb" aria-label="Breadcrumb">
-        <li><a href="index.html">Beranda</a></li>
-        <li aria-current="page">Tentang</li>
-      </ol>
-      <h1 class="page-title" id="tentang-title">Tentang CV Indo Jaya</h1>
-      <p class="page-lead">
-        Pembeli limbah besi dan logam untuk kebutuhan industri — dari pabrik, gudang,
-        sampai fasilitas produksi di kawasan industri.
-      </p>
+      <div class="ph-grid">
+
+        <div>
+          <ol class="crumb" aria-label="Breadcrumb">
+            <li><a href="index.html">Beranda</a></li>
+            <li aria-current="page">Tentang</li>
+          </ol>
+          <h1 class="page-title" id="tentang-title">Tentang CV Indo Jaya</h1>
+          <p class="page-lead">
+            Pembeli limbah besi tua, tembaga, aluminium, kuningan, dan stainless untuk
+            pabrik, gudang, serta kawasan industri. Volume besar, penimbangan transparan,
+            administrasi lengkap.
+          </p>
+          <div class="ph-actions">
+            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20menjual%20limbah%20pabrik.%20Jenis%2C%20volume%2C%20dan%20lokasi%3A%20" target="_blank" rel="noopener noreferrer">
+              Konsultasi via WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="index.html#jenis-limbah">Lihat jenis limbah</a>
+          </div>
+        </div>
+
+        <figure class="ph-media">
+          <img src="assets/hero/hero.jpg" width="1500" height="1130"
+               alt="Area penampungan scrap besi tua dan logam di kawasan industri"
+               loading="eager" decoding="async" fetchpriority="high" />
+          <!-- TODO(dummy): ganti tahun sesuai data perusahaan -->
+          <span class="ph-badge">Melayani industri sejak <b>2010</b></span>
+        </figure>
+
+      </div>
     </div>
   </section>
 
   <!-- ============================================================
-       ISI PROFIL
+       STATISTIK — SEMUA ANGKA DUMMY, GANTI DENGAN DATA ASLI
        ============================================================ -->
-  <section class="about" aria-label="Profil perusahaan">
+  <section class="stats" aria-label="Ringkasan perusahaan">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-num">2010</span>
+          <span class="stat-lbl">Mulai melayani industri</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-lbl">Ton kapasitas per bulan</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">120+</span>
+          <span class="stat-lbl">Pabrik &amp; gudang</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6</span>
+          <span class="stat-lbl">Jenis logam utama</span>
+        </div>
+      </div>
+      <p class="stats-note">*Angka sementara untuk pratinjau desain.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROFIL
+       ============================================================ -->
+  <section class="sec sec-cream" aria-labelledby="profil-title">
     <div class="wrap about-grid">
 
-      <div>
-        <h2>Siapa kami</h2>
+      <div class="prose">
+        <p class="eyebrow">Profil perusahaan</p>
+        <h2 class="h2" id="profil-title">Siapa CV Indo Jaya</h2>
         <p>
           CV Indo Jaya adalah pembeli limbah besi dan logam yang bekerja untuk kebutuhan
           industri. Kami membeli besi tua, scrap metal, tembaga, aluminium, kuningan, dan
@@ -514,8 +948,17 @@
           pembukuan perusahaan.
         </p>
 
+        <div class="about-media">
+          <img src="assets/gallery/galeri-01.jpg" width="720" height="542"
+               alt="Area penampungan scrap besi dan logam di kawasan industri"
+               loading="lazy" decoding="async" />
+          <img src="assets/gallery/galeri-05.jpg" width="720" height="480"
+               alt="Petugas memeriksa komponen logam di gudang pabrik"
+               loading="lazy" decoding="async" />
+        </div>
+
         <h2>Yang kami layani</h2>
-        <ul class="about-list">
+        <ul class="prose-list">
           <li>Pabrik manufaktur dengan limbah produksi rutin.</li>
           <li>Gudang dan fasilitas produksi yang menyimpan scrap dalam jumlah besar.</li>
           <li>Kawasan industri yang membutuhkan pengangkutan terjadwal.</li>
@@ -523,7 +966,7 @@
         </ul>
 
         <h2>Prinsip kerja</h2>
-        <ul class="about-list">
+        <ul class="prose-list">
           <li>Penawaran terbuka, dihitung dari jenis, kadar, dan volume material.</li>
           <li>Penimbangan di jembatan timbang resmi dan dicatat di berita acara.</li>
           <li>Dokumen serah terima lengkap untuk pembukuan dan audit internal.</li>
@@ -531,31 +974,385 @@
         </ul>
 
         <p>
-          Lihat <a class="about-link" href="index.html#jenis-limbah">jenis limbah yang kami terima</a>
-          atau <a class="about-link" href="index.html#cara-menjual">alur cara menjual</a> untuk
-          gambaran prosesnya.
+          Lihat <a href="index.html#jenis-limbah">jenis limbah yang kami terima</a>
+          atau <a href="index.html#cara-menjual">alur cara menjual</a> untuk gambaran
+          prosesnya.
         </p>
       </div>
 
-      <aside class="about-card" aria-labelledby="profil-card-title">
-        <h2 id="profil-card-title">Profil perusahaan</h2>
-        <p>
-          Bagian ini akan dilengkapi dengan profil resmi CV Indo Jaya agar calon mitra
-          bisa menilai perusahaan sebelum bekerja sama.
-        </p>
-        <ul>
-          <li>Legalitas dan izin usaha</li>
-          <li>Tahun berdiri dan struktur perusahaan</li>
-          <li>Kapasitas armada dan alat bongkar muat</li>
-          <li>Wilayah layanan</li>
-          <li>Pengalaman penanganan limbah pabrik</li>
+      <!-- TODO(dummy): semua isi kartu ini contoh, ganti dengan data resmi perusahaan -->
+      <aside class="fact-card" aria-labelledby="fakta-title">
+        <h2 id="fakta-title">Fakta singkat</h2>
+        <ul class="fact-list">
+          <li><span class="fact-k">Badan usaha</span><span class="fact-v">CV</span></li>
+          <li><span class="fact-k">Berdiri</span><span class="fact-v">2010</span></li>
+          <li><span class="fact-k">Kapasitas</span><span class="fact-v">±500 ton/bulan</span></li>
+          <li><span class="fact-k">Armada</span><span class="fact-v">12 unit truk</span></li>
+          <li><span class="fact-k">Wilayah</span><span class="fact-v">Jabodetabek–Karawang</span></li>
+          <li><span class="fact-k">Fokus</span><span class="fact-v">B2B volume besar</span></li>
         </ul>
-        <a class="about-cta" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20mengetahui%20profil%20perusahaan.%20" target="_blank" rel="noopener noreferrer">
+        <a class="fact-cta" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20mengetahui%20profil%20perusahaan.%20" target="_blank" rel="noopener noreferrer">
           Hubungi tim kami
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
+        <p class="fact-note">Data pada kartu ini masih contoh dan akan diperbarui dengan profil resmi.</p>
       </aside>
 
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRINSIP
+       ============================================================ -->
+  <section class="sec sec-paper" aria-labelledby="nilai-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Cara kami bekerja</p>
+        <h2 class="h2" id="nilai-title">Empat hal yang kami jaga di setiap transaksi</h2>
+        <p class="sec-sub">
+          Menjual limbah pabrik bukan sekadar soal harga tertinggi. Yang menentukan adalah
+          kejelasan hitungan, bukti timbangan, dan dokumen yang bisa dipertanggungjawabkan.
+        </p>
+      </header>
+
+      <div class="val-grid">
+        <div class="val">
+          <span class="val-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          </span>
+          <h3>Harga mengikuti pasar</h3>
+          <p>Nilai dihitung dari jenis, kadar, dan volume material — bukan angka rata-rata yang sama untuk semua limbah.</p>
+        </div>
+        <div class="val">
+          <span class="val-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M5 21h14"/><path d="M6 21 8 7h8l2 14"/><path d="M4 7h16"/><path d="M9 12h6"/></svg>
+          </span>
+          <h3>Timbangan terbuka</h3>
+          <p>Penimbangan dilakukan di jembatan timbang resmi, hasilnya dicatat, dan penjual bisa ikut menyaksikan.</p>
+        </div>
+        <div class="val">
+          <span class="val-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 18h4"/></svg>
+          </span>
+          <h3>Dokumen rapi</h3>
+          <p>Berita acara penimbangan dan surat jalan disiapkan untuk pembukuan, audit internal, dan pencatatan aset.</p>
+        </div>
+        <div class="val">
+          <span class="val-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h13V6H3z"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          </span>
+          <h3>Jadwal terkendali</h3>
+          <p>Pengangkutan bisa bertahap agar area pabrik tidak penuh dan aktivitas produksi tetap berjalan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       JENIS LIMBAH
+       ============================================================ -->
+  <section class="sec sec-white" aria-labelledby="material-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Material</p>
+        <h2 class="h2" id="material-title">Jenis limbah logam yang kami beli</h2>
+        <p class="sec-sub">
+          Kami membeli limbah logam dari proses produksi, perawatan mesin, dan bongkaran
+          fasilitas pabrik. Setiap jenis dihitung terpisah sesuai kadar dan kondisi material.
+        </p>
+      </header>
+
+      <div class="mat-grid">
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/besi-tua.jpg" width="800" height="600"
+                 alt="Tumpukan besi tua dan scrap logam di area penampungan pabrik"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Besi tua</h3>
+            <p>Scrap besi, potongan mesin, dan struktur bekas dari area produksi.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/tembaga.jpg" width="800" height="600"
+                 alt="Batang tembaga bekas dari instalasi industri"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Tembaga</h3>
+            <p>Kabel, busbar, dan komponen tembaga sisa instalasi industri.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/aluminium.jpg" width="800" height="600"
+                 alt="Blok aluminium sisa produksi pabrik"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Aluminium</h3>
+            <p>Profil, plat, dan komponen aluminium sisa produksi atau renovasi.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/kuningan.jpg" width="800" height="600"
+                 alt="Fitting dan keran kuningan bekas dari fasilitas pabrik"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Kuningan</h3>
+            <p>Fitting, keran, dan komponen kuningan bekas dari sistem perpipaan.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/stainless.jpg" width="800" height="600"
+                 alt="Balingan scrap stainless steel di area penampungan"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Stainless steel</h3>
+            <p>Scrap stainless dari dapur produksi, tangki, dan peralatan pabrik.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="mat" href="index.html#jenis-limbah">
+          <div class="mat-media">
+            <img src="assets/materials/besi-cor.jpg" width="800" height="600"
+                 alt="Potongan besi cor bekas atau cast iron scrap"
+                 loading="lazy" decoding="async" />
+          </div>
+          <div class="mat-body">
+            <h3>Besi cor</h3>
+            <p>Cast iron scrap dari mesin, pipa, dan komponen berbobot berat.</p>
+            <span class="mat-link">Lihat detail
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DOKUMENTASI
+       ============================================================ -->
+  <section class="sec sec-cream" aria-labelledby="foto-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Dokumentasi</p>
+        <h2 class="h2" id="foto-title">Dari sortir sampai bongkar muat</h2>
+        <p class="sec-sub">
+          Gambaran alur kerja di lapangan: material diperiksa, dipilah, ditimbang, lalu
+          diangkut dengan jadwal yang disepakati.
+        </p>
+      </header>
+
+      <div class="photo-grid">
+        <figure>
+          <img src="assets/gallery/galeri-02.jpg" width="720" height="542"
+               alt="Tumpukan scrap metal pabrik yang menunggu proses sortir"
+               loading="lazy" decoding="async" />
+          <figcaption>Scrap menunggu sortir</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gallery/galeri-03.jpg" width="720" height="539"
+               alt="Balingan besi tua hasil pemadatan sebelum pengangkutan"
+               loading="lazy" decoding="async" />
+          <figcaption>Pemadatan besi tua</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gallery/galeri-04.jpg" width="720" height="540"
+               alt="Pemeriksaan kualitas scrap besi sebelum penimbangan"
+               loading="lazy" decoding="async" />
+          <figcaption>Pemeriksaan kualitas</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gallery/galeri-06.jpg" width="720" height="540"
+               alt="Truk pengangkut limbah logam menuju jembatan timbang"
+               loading="lazy" decoding="async" />
+          <figcaption>Pengangkutan ke timbangan</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ALUR KERJA
+       ============================================================ -->
+  <section class="sec sec-white" aria-labelledby="alur-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Alur kerja</p>
+        <h2 class="h2" id="alur-title">Cara menjual limbah ke CV Indo Jaya</h2>
+        <p class="sec-sub">
+          Empat langkah, tanpa survei berulang. Setelah data limbah diterima, tim kami
+          menyusun penawaran dan jadwal pengangkutan.
+        </p>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-n">LANGKAH 01</span>
+          <h3>Kirim data limbah</h3>
+          <p>Jenis material, perkiraan volume, lokasi pabrik, dan foto limbah via WhatsApp.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">LANGKAH 02</span>
+          <h3>Terima penawaran</h3>
+          <p>Tim menghitung nilai dari jenis dan kadar material, lalu mengirim penawaran.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">LANGKAH 03</span>
+          <h3>Penimbangan</h3>
+          <p>Material diangkut dan ditimbang di jembatan timbang resmi, disaksikan penjual.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">LANGKAH 04</span>
+          <h3>Pembayaran &amp; dokumen</h3>
+          <p>Pembayaran setelah berita acara ditandatangani, surat jalan diserahkan.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WILAYAH LAYANAN — DAFTAR DUMMY
+       ============================================================ -->
+  <section class="sec sec-paper" aria-labelledby="wilayah-title">
+    <div class="wrap cov-grid">
+      <div>
+        <p class="eyebrow">Jangkauan</p>
+        <h2 class="h2" id="wilayah-title">Wilayah layanan</h2>
+        <p class="sec-sub">
+          Pengangkutan dijadwalkan dari gudang kami di Jakarta Timur menuju lokasi pabrik.
+          Area utama ada di Jabodetabek dan koridor industri Jawa Barat.
+        </p>
+        <!-- TODO(dummy): sesuaikan daftar wilayah dengan jangkauan sebenarnya -->
+        <ul class="chips">
+          <li class="chip">Jakarta</li>
+          <li class="chip">Bekasi</li>
+          <li class="chip">Cikarang</li>
+          <li class="chip">Karawang</li>
+          <li class="chip">Tangerang</li>
+          <li class="chip">Bogor</li>
+          <li class="chip">Bandung</li>
+          <li class="chip">Serang</li>
+        </ul>
+      </div>
+
+      <div class="cov-card">
+        <h3>Lokasi di luar daftar?</h3>
+        <p>
+          Kirim alamat pabrik dan perkiraan volume. Tim akan menilai kelayakan
+          pengangkutan, jadwal, dan biaya angkutnya sebelum penawaran.
+        </p>
+        <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20lokasi%20pabrik%20saya%20di%20luar%20daftar.%20Alamat%20dan%20volume%3A%20" target="_blank" rel="noopener noreferrer">
+          Cek lokasi saya
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="sec sec-white" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="h2" id="faq-title">Pertanyaan umum soal jual limbah besi</h2>
+        <p class="sec-sub">
+          Jawaban singkat untuk pertanyaan yang paling sering masuk dari tim purchasing
+          dan pengelola gudang pabrik.
+        </p>
+      </header>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Apakah CV Indo Jaya membeli limbah besi dari pabrik?</summary>
+          <p>Ya. Kami membeli limbah besi dan logam langsung dari pabrik, gudang, dan fasilitas produksi. Pembelian bersifat B2B dan tidak melayani rumah tangga.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Berapa volume minimal limbah yang bisa dijual?</summary>
+          <p>Kami memprioritaskan volume besar agar pengangkutan efisien. Kirim perkiraan berat dan lokasi pabrik, tim akan menilai apakah pengambilan bisa dijadwalkan.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bagaimana harga limbah besi ditentukan?</summary>
+          <p>Harga mengikuti jenis logam, kadar material, kondisi, dan volume. Besi tua, tembaga, aluminium, dan kuningan dihitung terpisah, lalu ditawarkan per kilogram sebelum material diangkut.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bagaimana proses penimbangan dan pembayaran?</summary>
+          <p>Material ditimbang di jembatan timbang resmi. Hasil penimbangan dicatat dalam berita acara, dan pembayaran dilakukan setelah dokumen ditandatangani.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apakah limbah bisa dijemput ke lokasi pabrik?</summary>
+          <p>Bisa. Pengangkutan dijadwalkan sesuai volume dan akses kendaraan di lokasi, termasuk pengambilan bertahap untuk volume besar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apakah bisa kerja sama pengambilan rutin?</summary>
+          <p>Bisa. Untuk pabrik dengan limbah produksi rutin, jadwal pengambilan dapat disusun berulang agar material tidak menumpuk di area kerja.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Dokumen apa saja yang disiapkan?</summary>
+          <p>Berita acara penimbangan dan surat jalan. Dokumen ini bisa dipakai untuk pembukuan, audit internal, dan pencatatan aset perusahaan.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apakah menerima limbah logam dari rumah tangga?</summary>
+          <p>Tidak. CV Indo Jaya hanya melayani pembelian dari perusahaan, pabrik, gudang, dan kawasan industri.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wilayah mana saja yang dilayani?</summary>
+          <p>Area utama Jabodetabek, Cikarang, Karawang, dan Bandung. Untuk lokasi lain, kirim alamat pabrik untuk dicek jadwal dan biaya angkutnya.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA PENUTUP
+       ============================================================ -->
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="wrap cta-inner">
+      <div>
+        <h2 id="cta-title">Siap menjual limbah pabrik Anda?</h2>
+        <p>
+          Kirim jenis material, perkiraan volume, dan lokasi. Tim kami akan menghitung
+          penawaran dan menyusun jadwal pengangkutan.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20menjual%20limbah.%20Jenis%2C%20volume%2C%20dan%20lokasi%3A%20" target="_blank" rel="noopener noreferrer">
+          Mulai via WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="index.html#kontak">Lihat kontak</a>
+      </div>
     </div>
   </section>
 
@@ -628,7 +1425,7 @@
     </div>
 
     <div class="ft-bottom">
-      <p>Ac 2026 CV Indo Jaya. Seluruh hak cipta dilindungi.</p>
+      <p>© 2026 CV Indo Jaya. Seluruh hak cipta dilindungi.</p>
       <p class="ft-note">Pembelian hanya untuk kebutuhan industri. Tidak melayani rumah tangga.</p>
       <a class="ft-top" href="#konten">Kembali ke atas
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
