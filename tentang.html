@@ -131,50 +131,97 @@
   @media(min-width:768px){.mobile-menu{display:none!important}}
 
   /* ============================================================
-     HERO HALAMAN
+     HERO PROFIL — EDITORIAL
      ============================================================ */
-  .page-head{
-    position:relative;overflow:hidden;
-    background:var(--coal);color:#fff;
-    padding:36px 0 0;
-  }
-  @media(min-width:768px){.page-head{padding:56px 0 0}}
-  .page-head::before{
-    content:"";position:absolute;pointer-events:none;
-    top:-160px;right:-120px;width:520px;height:520px;border-radius:50%;
-    background:radial-gradient(circle,rgba(244,119,40,.18),rgba(244,119,40,0) 68%);
-  }
-  .ph-grid{
+  .about-hero{
     position:relative;
-    display:grid;gap:34px;
-    padding-bottom:40px;
+    background:var(--cream);color:var(--coal);
+    padding:30px 0 0;
   }
-  @media(min-width:980px){
-    .ph-grid{grid-template-columns:1.02fr .98fr;align-items:center;gap:56px;padding-bottom:56px}
+  .ah-top{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding-bottom:20px;border-bottom:1px solid rgba(23,26,28,.14);
   }
-
   .crumb{
     display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-    margin:0 0 16px;padding:0;list-style:none;
+    margin:0;padding:0;list-style:none;
     font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    color:rgba(255,255,255,.42);
+    color:rgba(23,26,28,.48);
   }
   .crumb a{transition:color .18s ease}
-  .crumb a:hover{color:var(--orange)}
-  .crumb li + li::before{content:"/";margin-right:8px;color:rgba(255,255,255,.22)}
-
-  .page-title{
+  .crumb a:hover{color:var(--orange-deep)}
+  .crumb li + li::before{content:"/";margin-right:8px;color:rgba(23,26,28,.24)}
+  .ah-stamp{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:#6d7579;
+  }
+  .ah-stamp::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange)}
+  .ah-grid{display:grid;gap:26px;padding:38px 0 44px}
+  @media(min-width:900px){
+    .ah-grid{grid-template-columns:1.08fr .92fr;gap:64px;align-items:end;padding:52px 0 56px}
+  }
+  .ah-title{
     margin:0;
     font-family:var(--font-head);font-weight:800;
-    font-size:clamp(2rem,4.4vw,3.05rem);
-    line-height:1.08;letter-spacing:-.025em;
+    font-size:clamp(2.25rem,7.2vw,5.2rem);
+    line-height:.92;letter-spacing:-.05em;
   }
-  .page-lead{
-    margin-top:16px;max-width:56ch;
-    font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,.72);
+  .ah-overline{
+    display:block;margin-bottom:16px;
+    font-family:var(--font-body);font-size:.6875rem;font-weight:700;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--orange-deep);
+  }
+  .ah-name{display:block;white-space:nowrap}
+  .ah-side{
+    border-top:1px solid rgba(23,26,28,.16);
+    padding-top:20px;
+  }
+  @media(min-width:900px){.ah-side{padding-top:24px}}
+  .ah-lead{
+    margin:0;max-width:44ch;
+    font-size:1.0625rem;line-height:1.72;color:var(--body);
+  }
+  .ah-scroll{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-top:24px;padding-bottom:6px;
+    border-bottom:1px solid rgba(23,26,28,.24);
+    font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--coal);transition:color .2s ease,border-color .2s ease;
+  }
+  .ah-scroll svg{width:14px;height:14px;color:var(--orange-deep);transition:transform .2s ease}
+  .ah-scroll:hover{color:var(--orange-deep);border-color:var(--orange)}
+  .ah-scroll:hover svg{transform:translateY(2px)}
+  .ah-media{
+    position:relative;margin:0;overflow:hidden;
+    background:var(--coal);
+  }
+  .ah-media img{
+    width:100%;height:clamp(240px,42vw,520px);
+    object-fit:cover;object-position:center 46%;
+  }
+  .ah-media::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(to top,rgba(10,12,13,.72),rgba(10,12,13,0));
+    pointer-events:none;
+  }
+  .ah-cap{
+    position:absolute;left:0;right:0;bottom:0;z-index:1;
+    display:flex;align-items:flex-end;justify-content:space-between;gap:20px;
+    padding-top:0;padding-bottom:18px;
+    color:#fff;
+  }
+  .ah-cap-l b{display:block;font-family:var(--font-head);font-weight:700;font-size:.8125rem;letter-spacing:.01em}
+  .ah-cap-l span{display:block;margin-top:3px;font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+  .ah-cap-r{font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:right}
+  @media(max-width:639px){
+    .ah-stamp{display:none}
+    .ah-top{padding-bottom:16px}
+    .ah-grid{padding:30px 0 34px}
+    .ah-cap{padding-bottom:14px}
+    .ah-cap-r{display:none}
   }
 
-  .ph-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
     min-height:46px;padding:0 20px;border-radius:8px;
@@ -184,27 +231,6 @@
   .btn svg{width:16px;height:16px;flex:0 0 auto}
   .btn-primary{background:var(--orange);color:#fff}
   .btn-primary:hover{background:#ff8a3d;transform:translateY(-1px)}
-  .btn-ghost{border:1px solid rgba(255,255,255,.24);color:#fff}
-  .btn-ghost:hover{border-color:rgba(244,119,40,.7);color:var(--orange)}
-
-  .ph-media{position:relative;margin:0}
-  .ph-media img{
-    width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.14);
-    box-shadow:0 40px 80px -50px rgba(0,0,0,.9);
-  }
-  .ph-badge{
-    position:absolute;left:14px;bottom:14px;
-    display:inline-flex;align-items:center;gap:8px;
-    padding:9px 14px;border-radius:999px;
-    background:rgba(18,21,23,.88);
-    border:1px solid rgba(255,255,255,.16);
-    backdrop-filter:blur(6px);
-    font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-    color:rgba(255,255,255,.82);
-  }
-  .ph-badge b{color:var(--orange);font-weight:800}
 
   /* ============================================================
      STATISTIK (angka dummy)
@@ -1024,10 +1050,10 @@
         },
         {
           "@type": "Question",
-          "name": "Bagaimana cara meminta company profile?",
+          "name": "Apakah CV Indo Jaya menyediakan company profile?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hubungi tim melalui WhatsApp atau halaman kontak. Kami kirimkan profil singkat, cakupan layanan, dan dokumen pendukung untuk verifikasi."
+            "text": "Ya. Kami menyiapkan ringkasan profil perusahaan, cakupan layanan, dan dokumen pendukung untuk proses verifikasi mitra."
           }
         }
       ]
@@ -1092,39 +1118,47 @@
   <!-- ============================================================
        HERO HALAMAN
        ============================================================ -->
-  <section class="page-head" aria-labelledby="tentang-title">
+  <section class="about-hero" aria-labelledby="tentang-title">
     <div class="wrap">
-      <div class="ph-grid">
+      <div class="ah-top">
+        <ol class="crumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Beranda</a></li>
+          <li aria-current="page">Tentang</li>
+        </ol>
+        <p class="ah-stamp">Profil perusahaan 2026</p>
+      </div>
 
-        <div>
-          <ol class="crumb" aria-label="Breadcrumb">
-            <li><a href="index.html">Beranda</a></li>
-            <li aria-current="page">Tentang</li>
-          </ol>
-          <h1 class="page-title" id="tentang-title">Tentang CV Indo Jaya</h1>
-          <p class="page-lead">
+      <div class="ah-grid">
+        <h1 class="ah-title" id="tentang-title">
+          <span class="ah-overline">Tentang</span>
+          <span class="ah-name">CV Indo Jaya</span>
+        </h1>
+
+        <div class="ah-side">
+          <p class="ah-lead">
             Profil perusahaan: perjalanan sejak 2010, nilai yang kami pegang, fasilitas,
             legalitas, dan tim yang menangani limbah logam dari pabrik dan kawasan industri.
           </p>
-          <div class="ph-actions">
-            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20meminta%20company%20profile.%20" target="_blank" rel="noopener noreferrer">
-              Minta company profile
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="index.html#kontak">Lihat kontak</a>
-          </div>
+          <a class="ah-scroll" href="#profil">
+            Baca profil perusahaan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </a>
         </div>
-
-        <figure class="ph-media">
-          <img src="assets/hero/hero.jpg" width="1500" height="1130"
-               alt="Area penampungan scrap besi tua dan logam di kawasan industri"
-               loading="eager" decoding="async" fetchpriority="high" />
-          <!-- TODO(dummy): ganti tahun sesuai data perusahaan -->
-          <span class="ph-badge">Jakarta Timur — Sejak <b>2010</b></span>
-        </figure>
-
       </div>
     </div>
+
+    <figure class="ah-media">
+      <img src="assets/hero/hero.jpg" width="1500" height="1130"
+           alt="Gudang dan area penampungan scrap besi tua serta logam di kawasan industri"
+           loading="eager" decoding="async" fetchpriority="high" />
+      <figcaption class="wrap ah-cap">
+        <span class="ah-cap-l">
+          <b>Gudang &amp; area sortir</b>
+          <span>Jakarta Timur</span>
+        </span>
+        <span class="ah-cap-r">Dokumentasi CV Indo Jaya</span>
+      </figcaption>
+    </figure>
   </section>
 
   <!-- ============================================================
@@ -1217,10 +1251,6 @@
           <li><span class="fact-k">Wilayah</span><span class="fact-v">Jabodetabek &amp; Jawa Barat</span></li>
           <li><span class="fact-k">Fokus</span><span class="fact-v">B2B volume besar</span></li>
         </ul>
-        <a class="fact-cta" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20meminta%20company%20profile.%20" target="_blank" rel="noopener noreferrer">
-          Minta company profile
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
         <p class="fact-note">Data pada kartu ini masih contoh dan akan diperbarui dengan profil resmi.</p>
       </aside>
 
@@ -1228,7 +1258,7 @@
   </section>
 
   <!-- ============================================================
-       PRINSIP
+       PERJALANAN
        ============================================================ -->
     <section class="sec sec-white" id="perjalanan" aria-labelledby="perjalanan-title">
     <div class="wrap">
@@ -1601,31 +1631,9 @@
           <p>Bisa. Untuk limbah produksi rutin, jadwal pengambilan dan dokumentasi dapat disusun berulang sesuai kebutuhan pabrik.</p>
         </details>
         <details class="faq-item">
-          <summary>Bagaimana cara meminta company profile?</summary>
-          <p>Hubungi tim melalui WhatsApp atau halaman kontak. Kami kirimkan profil singkat, cakupan layanan, dan dokumen pendukung untuk verifikasi.</p>
+          <summary>Apakah CV Indo Jaya menyediakan company profile?</summary>
+          <p>Ya. Kami menyiapkan ringkasan profil perusahaan, cakupan layanan, dan dokumen pendukung untuk proses verifikasi mitra.</p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CTA PENUTUP
-       ============================================================ -->
-    <section class="cta-band cta-orange" aria-labelledby="cta-title">
-    <div class="wrap cta-inner">
-      <div>
-        <h2 id="cta-title">Minta company profile CV Indo Jaya</h2>
-        <p>
-          Kami kirimkan profil singkat, cakupan layanan, dan dokumen pendukung untuk
-          kebutuhan verifikasi perusahaan Anda.
-        </p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-dark" href="https://wa.me/6281234567890?text=Halo%20CV%20Indo%20Jaya%2C%20saya%20ingin%20meminta%20company%20profile%20dan%20dokumen%20pendukung.%20" target="_blank" rel="noopener noreferrer">
-          Minta via WhatsApp
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <a class="btn btn-line-dark" href="index.html#kontak">Lihat kontak</a>
       </div>
     </div>
   </section>
