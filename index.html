@@ -194,8 +194,8 @@
   @media(min-width:640px){.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(min-width:1280px){.trust-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
   .trust-item{
-    display:flex;align-items:center;gap:16px;
-    background:#252a2d;padding:26px 24px;
+    display:flex;align-items:center;gap:14px;
+    background:#252a2d;padding:26px 20px;
     color:#fff;font:inherit;text-align:left;border:0;
   }
   .trust-item p{font-weight:700;font-size:1rem;line-height:1.35;margin:0}
@@ -220,15 +220,18 @@
   }
   .trust-panel.is-open{grid-template-rows:1fr;opacity:1}
   .trust-panel-in{overflow:hidden}
+  .trust-reason-title{
+    margin:0;padding:18px 20px 0;
+    font-family:var(--font-head);font-weight:700;
+    font-size:.9375rem;line-height:1.35;color:var(--orange);
+  }
   .trust-reason{
-    margin:0;padding:18px 20px 22px;max-width:64rem;
+    margin:0;padding:6px 20px 20px;max-width:64rem;
     color:#d7dcdd;font-size:.9375rem;line-height:1.68;
   }
-  @media(min-width:768px){.trust-reason{padding:20px 24px 24px;font-size:1rem}}
-  .trust-reason-label{
-    display:block;margin-bottom:6px;
-    font-size:.6875rem;font-weight:700;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--orange);
+  @media(min-width:768px){
+    .trust-reason-title{padding:20px 24px 0;font-size:1rem}
+    .trust-reason{padding:6px 24px 22px;font-size:1rem;line-height:1.7}
   }
   @media (prefers-reduced-motion: reduce){
     .trust-panel{transition:none}
@@ -864,6 +867,48 @@
   ]
 }
 </script>
+
+<!-- FAQ terlihat di trust strip; ditandai agar mesin pencari membaca tanya-jawabnya -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kenapa harga kami kompetitif?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Penawaran dihitung dari harga pasar logam yang berlaku, kadar material, dan volume kiriman — bukan angka perkiraan. Penjual bisa membandingkan nilai per kilogram untuk besi tua, tembaga, aluminium, kuningan, dan stainless sebelum menyetujui penawaran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana penimbangan dilakukan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Penimbangan dilakukan di jembatan timbang resmi. Hasilnya dicatat dan disaksikan langsung oleh penjual, termasuk berat bersih dan potongan material, lalu dituangkan ke berita acara agar angka yang dibayarkan bisa dicek ulang."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dokumen apa yang diterima penjual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Setiap pengiriman dilengkapi berita acara penimbangan dan surat jalan resmi atas nama CV Indo Jaya. Dokumen ini bisa dipakai untuk pembukuan, audit internal, dan bukti material saat keluar dari area pabrik."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana pengangkutan volume besar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pengangkutan ditangani bertahap sesuai kapasitas armada dan kondisi lokasi. Tim kami menyusun jadwal pengambilan agar material tidak menumpuk di area pabrik, termasuk menyiapkan alat bantu bongkar muat bila diperlukan."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -949,14 +994,15 @@
 <section class="trust" aria-label="Keunggulan layanan">
   <div class="trust-inner">
     <div class="trust-grid">
-      <div class="trust-item">
+      <button class="trust-item trust-toggle" type="button" id="trust-btn-harga" aria-expanded="false" aria-controls="trust-panel-harga">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
           <path d="m15 9-6 6"></path><path d="M9 9h.01"></path><path d="M15 15h.01"></path>
         </svg>
         <p>Harga kompetitif</p>
-      </div>
-      <div class="trust-item">
+        <svg class="trust-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <button class="trust-item trust-toggle" type="button" id="trust-btn-timbang" aria-expanded="false" aria-controls="trust-panel-timbang">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3v18"></path>
           <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path>
@@ -965,8 +1011,9 @@
           <path d="M7 21h10"></path>
         </svg>
         <p>Penimbangan transparan</p>
-      </div>
-      <div class="trust-item">
+        <svg class="trust-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <button class="trust-item trust-toggle" type="button" id="trust-btn-dokumen" aria-expanded="false" aria-controls="trust-panel-dokumen">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
           <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
@@ -975,7 +1022,8 @@
           <path d="M16 17H8"></path>
         </svg>
         <p>Berita acara &amp; surat jalan</p>
-      </div>
+        <svg class="trust-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
       <button class="trust-item trust-toggle" type="button" id="trust-btn-volume" aria-expanded="false" aria-controls="trust-panel-volume">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path>
@@ -987,9 +1035,31 @@
       </button>
     </div>
 
+    <div class="trust-panel" id="trust-panel-harga" role="region" aria-labelledby="trust-btn-harga" aria-hidden="true">
+      <div class="trust-panel-in">
+        <h3 class="trust-reason-title">Kenapa harga kami kompetitif?</h3>
+        <p class="trust-reason">Penawaran dihitung dari harga pasar logam yang berlaku, kadar material, dan volume kiriman — bukan angka perkiraan. Penjual bisa membandingkan nilai per kilogram untuk besi tua, tembaga, aluminium, kuningan, dan stainless sebelum menyetujui penawaran.</p>
+      </div>
+    </div>
+
+    <div class="trust-panel" id="trust-panel-timbang" role="region" aria-labelledby="trust-btn-timbang" aria-hidden="true">
+      <div class="trust-panel-in">
+        <h3 class="trust-reason-title">Bagaimana penimbangan dilakukan?</h3>
+        <p class="trust-reason">Penimbangan dilakukan di jembatan timbang resmi. Hasilnya dicatat dan disaksikan langsung oleh penjual, termasuk berat bersih dan potongan material, lalu dituangkan ke berita acara agar angka yang dibayarkan bisa dicek ulang.</p>
+      </div>
+    </div>
+
+    <div class="trust-panel" id="trust-panel-dokumen" role="region" aria-labelledby="trust-btn-dokumen" aria-hidden="true">
+      <div class="trust-panel-in">
+        <h3 class="trust-reason-title">Dokumen apa yang diterima penjual?</h3>
+        <p class="trust-reason">Setiap pengiriman dilengkapi berita acara penimbangan dan surat jalan resmi atas nama CV Indo Jaya. Dokumen ini bisa dipakai untuk pembukuan, audit internal, dan bukti material saat keluar dari area pabrik.</p>
+      </div>
+    </div>
+
     <div class="trust-panel" id="trust-panel-volume" role="region" aria-labelledby="trust-btn-volume" aria-hidden="true">
       <div class="trust-panel-in">
-        <p class="trust-reason"><span class="trust-reason-label">Kenapa bisa?</span>Pengangkutan volume besar ditangani bertahap sesuai kapasitas armada dan kondisi lokasi. Tim kami menyusun jadwal pengambilan agar material tidak menumpuk di area pabrik, termasuk menyiapkan alat bantu bongkar muat bila diperlukan.</p>
+        <h3 class="trust-reason-title">Bagaimana pengangkutan volume besar?</h3>
+        <p class="trust-reason">Pengangkutan ditangani bertahap sesuai kapasitas armada dan kondisi lokasi. Tim kami menyusun jadwal pengambilan agar material tidak menumpuk di area pabrik, termasuk menyiapkan alat bantu bongkar muat bila diperlukan.</p>
       </div>
     </div>
   </div>
