@@ -1,0 +1,236 @@
+/* ============================================================
+ BASE — dipakai semua halaman (index.html & tentang.html)
+ Isi: token warna/font, reset, navbar, footer, tombol WhatsApp
+ ============================================================ */
+
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --coal:#171a1c;
+  --panel:#24292c;
+  --orange:#f47728;
+  --orange-deep:#ae4a12;
+  --cream:#f4f2ed;
+  --paper:#e9e9e5;
+  --muted:#abb3b7;
+  --body:#41494d;
+  --line-light:#d4d6d4;
+  --line-dark:rgba(255,255,255,.10);
+  --font-head:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;width:100%;
+  font-family:var(--font-body);
+  color:var(--coal);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  padding:12px 18px;background:var(--orange);color:#171a1c;
+  font-weight:700;font-size:.875rem;
+}
+.skip-link:focus{left:12px;top:12px}
+
+.wrap{max-width:80rem;margin:0 auto;padding-left:20px;padding-right:20px}
+@media(min-width:768px){.wrap{padding-left:32px;padding-right:32px}}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:50;width:100%;
+  background:var(--coal);color:#fff;
+  border-bottom:1px solid var(--line-dark);
+  box-shadow:0 10px 15px -3px rgba(0,0,0,.18),0 4px 6px -4px rgba(0,0,0,.18);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  max-width:80rem;margin:0 auto;padding:16px 20px;
+}
+@media(min-width:768px){.nav{padding:16px 32px}}
+
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:2px;
+  background:var(--orange);color:var(--coal);flex:0 0 auto;
+}
+.brand-mark svg{width:20px;height:20px}
+.brand-name{
+  font-family:var(--font-head);font-weight:800;font-size:1rem;
+  letter-spacing:-.025em;
+}
+
+.nav-links{display:none;align-items:center;gap:28px}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-links a{font-size:1rem;color:#fff;transition:color .18s ease}
+.nav-links a:hover{color:var(--orange)}
+.nav-links a[aria-current="true"]{color:var(--orange)}
+
+.nav-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px;border:0;border-radius:4px;background:transparent;color:#fff;cursor:pointer;
+}
+.nav-toggle svg{width:24px;height:24px}
+@media(min-width:768px){.nav-toggle{display:none}}
+
+.mobile-menu{display:none;border-top:1px solid var(--line-dark);padding:0 20px 20px}
+.mobile-menu.is-open{display:block}
+.mobile-menu nav{display:flex;flex-direction:column;gap:4px;padding-top:12px}
+.mobile-menu a{border-radius:4px;padding:10px 12px;font-size:1rem;color:#fff;transition:color .18s,background .18s}
+.mobile-menu a:hover{color:var(--orange);background:rgba(255,255,255,.04)}
+@media(min-width:768px){.mobile-menu{display:none!important}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{
+  background:#141719;
+  color:rgba(255,255,255,.66);
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:56px 0 26px;
+}
+@media(min-width:768px){.site-footer{padding:72px 0 30px}}
+
+.ft-grid{display:grid;gap:34px}
+@media(min-width:600px){
+  .ft-grid{grid-template-columns:1fr 1fr;gap:40px 32px}
+  .ft-brand{grid-column:1/-1}
+}
+@media(min-width:800px){
+  .ft-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(min-width:1000px){
+  .ft-grid{grid-template-columns:1.55fr .75fr .95fr .85fr;gap:44px;align-items:start}
+  .ft-brand{grid-column:auto}
+}
+
+.ft-desc{
+  margin:16px 0 0;max-width:36ch;
+  font-size:.875rem;line-height:1.65;color:rgba(255,255,255,.58);
+}
+.ft-soc{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.ft-soc .soc{width:40px;height:40px}
+.ft-soc .soc svg{width:18px;height:18px}
+
+.ft-h{
+  margin:0 0 14px;
+  font-family:var(--font-head);font-weight:700;
+  font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.42);
+}
+.ft-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ft-list a{
+  font-size:.875rem;color:rgba(255,255,255,.74);
+  transition:color .18s ease;
+}
+.ft-list a:hover,.ft-list a:focus-visible{
+  color:#fff;
+  text-decoration:underline;text-underline-offset:4px;
+  text-decoration-color:var(--orange);
+}
+
+.ft-addr{
+  margin:0;font-style:normal;
+  font-size:.875rem;line-height:1.65;color:rgba(255,255,255,.74);
+}
+.ft-hours{
+  margin:12px 0 0;
+  font-size:.8125rem;line-height:1.5;color:rgba(255,255,255,.42);
+}
+
+.ft-bottom{
+  margin-top:44px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;flex-direction:column;gap:10px;
+  font-size:.75rem;line-height:1.6;color:rgba(255,255,255,.44);
+}
+.ft-bottom p{margin:0}
+.ft-note{color:rgba(255,255,255,.36)}
+.ft-top{
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:6px;
+  color:rgba(255,255,255,.7);
+  transition:color .18s ease;
+}
+.ft-top:hover,.ft-top:focus-visible{color:var(--orange)}
+.ft-top svg{width:14px;height:14px}
+@media(min-width:768px){
+  .ft-bottom{
+    flex-direction:row;align-items:center;justify-content:space-between;
+    gap:24px;padding-right:84px;
+  }
+  .ft-note{flex:1;text-align:center}
+  .ft-top{margin-left:auto}
+}
+
+/* ============================================================
+   FLOATING WHATSAPP
+   ============================================================ */
+.wa-float{
+  position:fixed;right:28px;bottom:28px;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  width:60px;height:60px;border-radius:9999px;
+  background:linear-gradient(155deg,#3ee07a 0%,#25d366 46%,#12a24a 100%);
+  color:#fff;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.34),
+    inset 0 0 0 1px rgba(15,80,40,.18),
+    0 10px 22px -6px rgba(9,32,20,.42),
+    0 20px 44px -16px rgba(37,211,102,.72);
+  transition:transform .24s cubic-bezier(.34,1.56,.64,1),box-shadow .24s ease;
+  animation:wa-breathe 2.5s cubic-bezier(.45,0,.25,1) infinite;
+  will-change:scale;
+}
+@media(min-width:768px){
+  .wa-float{right:36px;bottom:36px}
+}
+/* garis ring di area shadow */
+.wa-float::after{
+  content:"";
+  position:absolute;inset:-7px;
+  border-radius:9999px;
+  border:3px solid rgba(37,211,102,.5);
+  pointer-events:none;
+  transition:border-color .24s ease;
+}
+.wa-float:hover::after{border-color:rgba(37,211,102,.8)}
+.wa-float:hover{
+  animation:none;
+  transform:translateY(-3px) scale(1.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 0 0 1px rgba(15,80,40,.18),
+    0 14px 28px -6px rgba(9,32,20,.48),
+    0 26px 54px -18px rgba(37,211,102,.85);
+}
+.wa-float:active{transform:translateY(-1px) scale(.97)}
+.wa-float svg{
+  width:30px;height:30px;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.2));
+}
+
+@keyframes wa-breathe{
+  0%, 6%{scale:1}
+  12%{scale:1.16}
+  20%{scale:1}
+  28%{scale:1.12}
+  38%, 100%{scale:1}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
