@@ -7,18 +7,28 @@ Varian ini memakai **batas section yang tegas**: section kontak berlatar cream, 
 ## Struktur
 
 ```
-index.html      # seluruh halaman (HTML + CSS + JS inline, tanpa framework/CDN)
+index.html          # halaman utama (hanya HTML + JSON-LD)
+tentang.html        # halaman profil perusahaan
 assets/
-  hero/         # foto hero
-  gallery/      # 7 foto galeri (slider horizontal)
-  materials/    # 6 foto jenis limbah
+  css/
+    base.css        # dipakai semua halaman: token, reset, navbar, footer, tombol WA
+    index.css       # khusus index.html
+    tentang.css     # khusus tentang.html
+  js/
+    common.js       # dipakai semua halaman: menu mobile
+    index.js        # khusus index.html: peta, slider galeri, reveal, dropdown
+  hero/             # foto hero
+  gallery/          # 7 foto galeri (slider horizontal)
+  materials/        # 6 foto jenis limbah
 robots.txt
 sitemap.xml
 ```
 
+Urutan muat CSS: `base.css` dulu, baru file khusus halaman. Menambah halaman baru cukup membuat `assets/css/<halaman>.css` lalu memuat keduanya.
+
 ## Menjalankan lokal
 
-Tidak ada build step.
+Tidak ada build step. Tetap tanpa framework.
 
 Buka `index.html` langsung di browser, atau:
 
